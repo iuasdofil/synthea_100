@@ -40,40 +40,43 @@ success response<br>
 
 
 invalid parameter error<br>
-status code: 400
+status code: 400<br>
 
 #### GET /person/visit_count
 조건에 일치하는 방문자 수를 반환해줍니다.
 
 filter 조건<br><br>
-
 visit: 방문유형(입원/외래/응급)별 방문자 수<br>
-visit의 값은 'Inpatient Visit', 'Outpatient Visit', 'Emergency Room Visit'을 가질 수 있습니다.
+visit의 값은 'Inpatient Visit', 'Outpatient Visit', 'Emergency Room Visit'을 가질 수 있습니다.<br>
 example)<br>
-GET /person/visit_count?visit=Inpatient%20Visit
-GET /person/visit_count?visit=Outpatient%20Visit
-GET /person/visit_count?visit=Emergency%20Room%20Visit
+GET /person/visit_count?visit=Inpatient%20Visit<br>
+GET /person/visit_count?visit=Outpatient%20Visit<br>
+GET /person/visit_count?visit=Emergency%20Room%20Visit<br>
 
 gender: 성별별 방문자 수<br>
 gender의 값은 F(Female), M(Male)을 가질 수 있습니다.<br>
-GET /person/visit_count?gender=F
-GET /person/visit_count?gender=M
+example)<br>
+GET /person/visit_count?gender=F<br>
+GET /person/visit_count?gender=M<br>
 
 race: 인종별 방문자 수<br>
 race의 값은 other, native, black, white, asian을 가질 수 있습니다.<br>
-GET /person/visit_count?race=other
-GET /person/visit_count?race=native
-GET /person/visit_count?race=white
+example)<br>
+GET /person/visit_count?race=other<br>
+GET /person/visit_count?race=native<br>
+GET /person/visit_count?race=white<br>
 
 ethnicity: 민족별 방문자 수<br>
 ethnicity의 값은 nonhispanic, hispanic을 가질 수 있습니다.<br>
-GET /person/visit_count?ethnicity=nonhispanic
-GET /person/visit_count?ethnicity=hispanic
+example)<br>
+GET /person/visit_count?ethnicity=nonhispanic<br>
+GET /person/visit_count?ethnicity=hispanic<br>
 
 age_group: 연령별 방문자 수<br>
-age_group은 10세 단위별 정수 값을 가질 수 있습니다.
-GET /person/visit_count?age_group=10
-GET /person/visit_count?age_group=30
+age_group은 10세 단위별 정수 값을 가질 수 있습니다.<br>
+example)<br>
+GET /person/visit_count?age_group=10<br>
+GET /person/visit_count?age_group=30<br>
 
 success response<br>
 ```json
@@ -93,14 +96,15 @@ concept 정보를 조회할 수 있는 API 입니다.
 keyword 필터를 사용하면 키워드 검색 가능합니다.<br>
 keyword는 검색할 값을 입력할 수 있습니다. 대소문자 가리지 않고 단어가 keyword 값이 포함된 concept 정보를 반환해줍니다.
 
-pagination parameter
-last_id, limit을 통해서 pagination 조회가 가능합니다. 
-last_id: 마지막 concept_id 값을 주면 last_id보다 큰 concept_id만 반환됩니다.
-limit: 조회할 데이터의 개수입니다.
+pagination parameter<br>
+last_id, limit을 통해서 pagination 조회가 가능합니다.<br> 
+last_id: 마지막 concept_id 값을 주면 last_id보다 큰 concept_id만 반환됩니다.<br>
+limit: 조회할 데이터의 개수입니다.<br>
 
-GET /concept
-GET /concept?keyword=gender
-GET /concept?keyword=gender&last_id=20&limit=30
+example)<br>
+GET /concept<br>
+GET /concept?keyword=gender<br>
+GET /concept?keyword=gender&last_id=20&limit=30<br>
 
 success response
 ```json
@@ -142,6 +146,7 @@ status code: 400
 filter 조건
 gender: 성별조건에 일치하는 환자 수를 반환해줍니다.<br>
 gender의 값은 F(Female), M(Male)을 가질 수 있습니다.<br>
+example)<br>
 GET /inquiry/person?gender=F<br>
 GET /inquiry/person?gender=M<br>
 
@@ -151,10 +156,10 @@ example)<br>
 GET /inquiry/person?race=other<br>
 GET /inquiry/person?race=white<br>
 
-pagination parameter
-last_id, limit을 통해서 pagination 조회가 가능합니다. 
-last_id: 마지막 concept_id 값을 주면 last_id보다 큰 concept_id만 반환됩니다.
-limit: 조회할 데이터의 개수입니다.
+pagination parameter<br>
+last_id, limit을 통해서 pagination 조회가 가능합니다.<br> 
+last_id: 마지막 concept_id 값을 주면 last_id보다 큰 concept_id만 반환됩니다.<br>
+limit: 조회할 데이터의 개수입니다.<br>
 
 
 ```json
